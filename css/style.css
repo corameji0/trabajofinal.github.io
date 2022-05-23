@@ -1,0 +1,906 @@
+html{
+    scroll-behavior: smooth;
+}
+
+:root{ /*selector para variables*/
+    --color_primario: #023e8a; /*color encabezado*/
+    --color_segundario: #4dbaeb; /*color primera parte*/
+    --color_terciario: #90e0ef; /*color segunda parte*/
+    --color_cuarto: beige; /*texto encabezado cuando pasa el mouse*/
+    --color_quinto: #01baef; 
+    --color_sexto:#6bcae5; 
+    --color_septimo:#ffffff; 
+    --color_octavo: aqua;
+    --color_noveno: rgb(41, 125, 158);
+    --type:'Poppins', sans-serif;
+}
+
+
+*{
+    margin: 0em;
+    padding: 0em;
+    box-sizing: border-box;
+    font-family: var(--type);
+    text-decoration: none;
+    
+}
+
+body {
+    background-color: var(--color_terciario);  /*segunda parte*/
+    
+}
+
+.container{
+    display: flex;
+    width: 70%;
+    max-width: 1700px;
+    margin: auto;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+nav { /*encabezado*/
+    background-color: var(--color_primario);
+    position: fixed; /*el navegador o la caja se queda estática*/
+    width: 100%;
+    z-index: 2100; /*para que las imagenes no peguen con el navegador*/
+}
+
+nav .nav {
+    padding: .9em 0em;
+}
+
+
+nav .container ul li {
+    display: inline;
+    padding: .3em;
+}
+
+nav .container ul li a{
+    font-size: 1em;
+    color: var(--color_segundario);
+    padding: .8em 1em;
+    border-radius: 10px;
+}
+
+nav .container ul li a:hover{
+    color: var(--color_cuarto); /*texto cuando pasa el mouse en encabezado*/
+    background-color: var(--color_quinto);
+}
+
+
+section .wrap {
+    align-items: center;
+    justify-content:center;
+    width: 70%; /*ancho en el contenedor*/
+    height: 95vh; /*alto en cualquier pantalla*/
+    max-width: 1700px; 
+    margin: auto; /*caja contenedora en el centro*/
+    text-align: center; /*texto centrado*/
+    color: var(--color_cuarto); /*color de texto*/
+    font-size: 1.4em; /*tamaño de texto*/
+}
+
+.bienvenida .wrap{
+    display: flex;
+}
+
+.bienvenida .wrap img{ /*tamaño de imagen*/
+    height: 300px;
+    width: 300px;
+    margin-top: 10em; /*disposición de imagen*/
+}
+
+.bienvenida .wrap h1{  /*titulo-parrafo*/
+    align-items: center;
+    margin-top: 8em;
+}
+
+.bienvenida .wrap .botones{
+    display: flex;
+    justify-content: space-around;
+}
+
+.bienvenida .wrap p{
+    align-items: center;
+}
+
+
+.bienvenida .down {
+    margin-top: 2em;
+}
+
+.bienvenida {
+    background-color: var(--color_sexto); /*primera clase*/
+    
+    
+}
+
+
+.servicios{
+    background-color: var(--color_noveno);
+}
+
+.trabajos{
+    background-color: var(--color_sexto);
+}
+
+
+
+.habilidades .wrap{
+    display: flex;
+    justify-content: space-around;
+}
+
+
+.habilidades .wrap .parte2{
+    padding: 0em 2em;
+}
+
+.habilidades .wrap .parte2 p{
+    text-align: left;
+    
+}
+
+.habilidades .wrap .iconos{
+    flex-direction: column;
+}
+
+.pasatiempos .wrap .titulo{
+    margin: auto;
+    padding: 2em;
+    margin-top: 2em;
+}
+
+.pasatiempos .wrap .gustos{
+    display: flex;
+    margin-top: 3em;
+}
+
+.pasatiempos .wrap{
+    justify-content: center;
+    margin-top: 3em;
+}
+
+.pasatiempos .wrap .titulo h1{
+text-align: center;
+display:flex;
+justify-content: center;
+}
+
+.parte1 {
+    color: var(--color_cuarto);
+   margin: auto;
+}
+
+.parte2 {
+    flex-direction: row;
+    justify-content: center;
+}
+
+
+.iconos{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    
+}
+
+.botones1{
+    display: flex;
+    flex-direction: row;
+  
+}
+
+.pasatiempos{
+    display: flex;
+    justify-content: space-around;
+}
+
+
+.pasatiempos h1{
+    display: flex;
+    color: var(--color_cuarto);
+    justify-content: space-around;
+    
+}
+
+.pasatiempos .wrap .titulo{
+    text-align: center;
+}
+
+
+
+  
+/*slider*/
+
+.texto3{
+    margin-top: 0.3em;
+}
+.texto4{
+    margin-top: 0.7em;
+}
+.swiper {
+    width: 90%;
+    height: 80%;
+    margin-top: 0.7em;
+  }
+
+  .swiper-slide {
+    text-align: center;
+    font-size: 1,2em;
+    background: var(--color_sexto);
+    margin-top: 0.7px;
+
+    /* Center slide text vertically */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+  }
+
+  .swiper-slide img { /* margen de las fotos */
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    margin-top: 0.02em;
+  }
+
+  .swiper-slide {
+    width: 60%;
+    margin-top: 0.7em;
+  }
+
+  .swiper-slide:nth-child(2n) {
+    width: 40%;
+    margin-top: 0.7em;
+  }
+
+  .swiper-slide:nth-child(3n) {
+    width: 20%;
+    margin-top: 0.7em;
+  }
+  /*fin de slider*/
+
+
+  .contacto{ /*video*/
+
+     background-color: var(--color_octavo);
+
+  }
+  .contacto .wrap{ /*color texto*/
+      color: var(--color_septimo);
+      text-align: center;
+  }
+
+  .contacto .wrap .redes ul{
+      display: flex;
+      list-style: none;
+      
+  }
+
+  .texto5{
+     margin-top: 1.3em;
+  }
+
+  .texto6{
+    margin-top: 1.3em;
+  }
+
+
+
+
+/*redes sociales*/
+  .mapa{
+    margin-top: 1.9em;
+    width: 50%;
+    height: 50%;
+
+  }
+ 
+  .texto7{
+    margin-top: 0.7em;
+    display: flex;
+    justify-content: space-around
+  }
+
+  .iconos{
+    width: 50%;
+    height: 50%;
+    margin-top: 0.7em;
+    margin-left: 0.7em;
+    font-size: 0.9em;
+  }
+
+.fotoB{
+    width: 200px;
+    height: 200px;
+}
+
+
+/* ##Dispositivo = Smartphones de 320px a 479px */
+@media (min-width: 320px) and (max-width: 480px) {
+    /*Aquí van las propiedades y valores según el dispositivo*/
+
+
+    .container{
+        flex-direction: column;
+          
+    }
+
+.nav .logo img{
+    height: 50px;
+}
+
+.nav li {
+    font-size: 0.7em;
+}
+
+.bienvenida .wrap img{ /*tamaño de imagen*/
+    height: 100px;
+    width: 100px;
+    margin-top: 10em; /*disposición de imagen*/
+}
+
+.bienvenida .wrap p{
+    font-size: 0.4em;
+}
+
+.bienvenida .wrap h1{  /*titulo-parrafo*/
+    font-size: 1em;
+}
+  
+.bienvenida .wrap .botones{
+    font-size: 0.3em;
+}
+
+.habilidades .wrap{
+    flex-direction: column;
+}
+
+.habilidades .wrap h1{
+font-size: 1em;
+}
+
+
+.habilidades .wrap p{
+    font-size: 0.4em;
+
+}
+
+
+.habilidades .wrap .iconos {
+    height: 50px;
+    justify-content: center;
+    
+}
+
+.habilidades .wrap .iconos img{
+    margin-top: 0.025em;
+    height: 50px;
+    width: 50px;
+    
+}
+
+.habilidades .wrap .iconos i{
+    font-size: 0.5em;
+    
+}
+
+.trabajos .texto3{
+    font-size: 0.5em;
+   padding: 0.5em;
+}
+
+.trabajos .texto4{
+    font-size: 0.5em;
+   padding: 0.5em;
+}
+
+
+.swiper {
+    width: 100%;
+    height: 75%;
+    margin-top: 0.7em;
+  }
+
+  .swiper-slide {
+    text-align: center;
+    font-size: 1,2em;
+    background: var(--color_sexto);
+    margin-top: 0.7px;
+
+    /* Center slide text vertically */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+  }
+
+  .swiper-slide img { /* margen de las fotos */
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    margin-top: 0.02em;
+  }
+
+  .swiper-slide {
+    width: 100%;
+    margin-top: 0.7em;
+  }
+
+  .swiper-slide:nth-child(2n) {
+    width: 40%;
+    margin-top: 0.7em;
+  }
+
+  .swiper-slide:nth-child(3n) {
+    width: 20%;
+    margin-top: 0.7em;
+  }
+  /*fin de slider*/
+  
+    .pasatiempos .wrap {
+    margin: 0em;
+}
+
+  .pasatiempos .wrap .gustos{
+      flex-direction: column;
+  }
+
+  .pasatiempos .wrap .titulo{
+    padding: 0em;
+    
+}
+
+  .pasatiempos .wrap h1{
+      font-size: 1em;
+      
+  }
+
+  .pasatiempos .wrap p{
+      font-size: 0.5em;
+  }
+
+  .pasatiempos .wrap .fotos1 img{
+        height: 30px;
+}
+
+.contacto .wrap h1{
+    font-size: 1em;
+}
+
+.contacto .wrap iframe{
+    height: 11em;
+    width: 11em;
+}
+
+.contacto .wrap .texto7{
+    font-size: 0.3em;
+    display: flex;
+}
+
+.contacto .wrap .texto7 img{
+ height: 20px;
+ width: 20px;
+}
+
+}
+
+
+/* ##Dispositivo = Tablets, Mobiles de 481px a 767px */
+@media (min-width: 481px) and (max-width: 767px) {
+    /*Aquí van las propiedades y valores según el dispositivo*/
+    
+
+    .container{
+        flex-direction: column;
+          
+    }
+
+.nav .logo img{
+    height: 70px;
+}
+
+.nav li {
+    font-size: 0.5em;
+}
+
+.bienvenida .wrap{
+    flex-direction: column;
+}
+
+.bienvenida .wrap img{ /*tamaño de imagen*/
+    height: 250px;
+    width: 250px;
+    margin-top: 5em; /*disposición de imagen*/
+}
+
+.bienvenida .wrap p{
+    font-size: 0.7em;
+    margin: 0em;
+}
+
+.bienvenida .wrap h1{  /*titulo-parrafo*/
+    font-size: 1em;
+    margin: 0em;
+}
+  
+.bienvenida .wrap .botones{
+    font-size: 0.5em;
+}
+
+.habilidades .wrap{
+    flex-direction: column;
+    margin:auto;
+    justify-content: space-around;
+    
+}
+
+.habilidades .wrap h1{
+font-size: 1em;
+}
+
+
+.habilidades .wrap p{
+    font-size: 0.7em;
+
+}
+
+.habilidades .wrap .todas{
+    display: flex;
+}
+
+
+.habilidades .wrap .iconos {
+    height: 50px;
+    justify-content: center;
+    
+}
+
+.habilidades .wrap .iconos img{
+    margin-top: 0.025em;
+    height: 50px;
+    width: 50px;
+    
+    
+}
+
+.habilidades .wrap .iconos i{
+    font-size: 0.5em;
+    
+}
+
+.trabajos .wrap{
+    
+    justify-content: space-around;
+}
+
+.trabajos .texto3{
+    font-size: 1em;
+   padding: 1em;
+}
+
+.trabajos .texto4{
+    font-size: 0.7em;
+   padding: 0.5em;
+}
+
+
+.swiper {
+    width: 100%;
+    height: 50%;
+    margin-top: 0.7em;
+  }
+
+  .swiper-slide {
+    text-align: center;
+    font-size: 1,2em;
+    background: var(--color_sexto);
+    margin-top: 0.7px;
+
+    /* Center slide text vertically */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+  }
+
+  .swiper-slide img { /* margen de las fotos */
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    margin-top: 0.02em;
+  }
+
+  .swiper-slide {
+    width: 100%;
+    margin-top: 0.7em;
+  }
+
+  .swiper-slide:nth-child(2n) {
+    width: 40%;
+    margin-top: 0.7em;
+  }
+
+  .swiper-slide:nth-child(3n) {
+    width: 20%;
+    margin-top: 0.7em;
+  }
+  /*fin de slider*/
+  
+    .pasatiempos .wrap {
+    margin: 0em;
+}
+
+  .pasatiempos .wrap .gustos{
+      flex-direction: column;
+  }
+
+  .pasatiempos .wrap .titulo{
+    padding: 0em;
+    
+}
+
+  .pasatiempos .wrap h1{
+      font-size: 1.5em;
+      
+  }
+
+  .pasatiempos .wrap p{
+      font-size: 0.6em;
+  }
+
+  .pasatiempos .wrap .fotos1 img{
+        height: 55px;
+}
+
+.contacto .wrap h1{
+    font-size: 1em;
+}
+
+.contacto .wrap iframe{
+    height: 11em;
+    width: 11em;
+}
+
+.contacto .wrap .texto7{
+    font-size: 0.7em;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contacto .wrap .texto7 img{
+ height: 40px;
+ width: 40px;
+}
+}
+
+
+
+/* ##Dispositivo = Tablets, Ipads (horizontal) 768px to 1024px */
+@media (min-width: 768px) and (max-width: 1024px)  {
+    /*Aquí van las propiedades y valores según el dispositivo*/
+
+
+    
+    .container{
+        flex-direction: column;
+          
+    }
+
+.nav .logo img{
+    height: 90px;
+}
+
+.nav li {
+    font-size: 0.9em;
+}
+
+.bienvenida .wrap{
+    flex-direction: column;
+}
+
+.bienvenida .wrap img{ /*tamaño de imagen*/
+    height: 350px;
+    width: 350px;
+    margin-top: 5em; /*disposición de imagen*/
+}
+
+.bienvenida .wrap p{
+    font-size: 1em;
+    margin: 0em;
+}
+
+.bienvenida .wrap h1{  /*titulo-parrafo*/
+    font-size: 1.5em;
+    margin: 0em;
+}
+  
+.bienvenida .wrap .botones{
+    font-size: 1em;
+}
+
+.habilidades .wrap{
+    flex-direction: column;
+    margin:auto;
+    justify-content: space-around;
+    
+}
+
+.habilidades .wrap h1{
+font-size: 1.5em;
+}
+
+
+.habilidades .wrap p{
+    font-size: 1em;
+
+}
+
+.habilidades .wrap .todas{
+    display: flex;
+}
+
+
+.habilidades .wrap .iconos {
+    height: 50px;
+    justify-content: center;
+    
+}
+
+.habilidades .wrap .iconos img{
+    margin-top: 0.025em;
+    height: 100px;
+    width: 100px;
+    
+    
+}
+
+.habilidades .wrap .iconos i{
+    font-size: 1em;
+    
+}
+
+.trabajos .wrap{
+    
+    justify-content: space-around;
+}
+
+.trabajos .texto3{
+    font-size: 1.5em;
+   padding: 1em;
+}
+
+.trabajos .texto4{
+    font-size: 1em;
+   padding: 0.5em;
+}
+
+
+.swiper {
+    width: 100%;
+    height: 70%;
+    margin-top: 0.7em;
+  }
+
+  .swiper-slide {
+    text-align: center;
+    font-size: 1,2em;
+    background: var(--color_sexto);
+    margin-top: 0.7px;
+
+    /* Center slide text vertically */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+  }
+
+  .swiper-slide img { /* margen de las fotos */
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    margin-top: 0.02em;
+  }
+
+  .swiper-slide {
+    width: 100%;
+    margin-top: 0.7em;
+  }
+
+  .swiper-slide:nth-child(2n) {
+    width: 40%;
+    margin-top: 0.7em;
+  }
+
+  .swiper-slide:nth-child(3n) {
+    width: 20%;
+    margin-top: 0.7em;
+  }
+  /*fin de slider*/
+  
+    .pasatiempos .wrap {
+    margin: 0em;
+}
+
+  .pasatiempos .wrap .gustos{
+      flex-direction: column;
+  }
+
+  .pasatiempos .wrap .titulo{
+    padding: 0em;
+    
+}
+
+  .pasatiempos .wrap h1{
+      font-size: 1.5em;
+      
+  }
+
+  .pasatiempos .wrap p{
+      font-size: 1em;
+  }
+
+  .pasatiempos .wrap .fotos1 img{
+        height: 110px;
+}
+
+.contacto .wrap h1{
+    font-size: 1em;
+}
+
+.contacto .wrap iframe{
+    height: 11em;
+    width: 11em;
+}
+
+.contacto .wrap .texto7{
+    font-size: 1em;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contacto .wrap .texto7 img{
+ height: 60px;
+ width: 60px;
+}
+}
+
